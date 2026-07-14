@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f3ee" />
+  <title>Lista de Presentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Nosso casamento</p>
+      <h1>Lista de Presentes</h1>
+      <p class="subtitle">
+        Veja a lista completa abaixo. Para escolher um presente disponível,
+        toque em <strong>Reservar</strong> e informe seu nome.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="topbar">
+      <p id="statusMessage" class="status-message" role="status" aria-live="polite">
+        Carregando presentes...
+      </p>
+      <button id="refreshButton" class="button button--secondary" type="button">
+        Atualizar lista
+      </button>
+    </div>
+
+    <section id="giftList" class="gift-list" aria-label="Lista completa de presentes"></section>
+  </main>
+
+  <dialog id="reserveDialog" class="dialog">
+    <form id="reserveForm">
+      <button class="dialog__close" type="button" id="closeDialog" aria-label="Fechar">×</button>
+      <p class="eyebrow">Reservar presente</p>
+      <h2 id="selectedGiftName">Presente</h2>
+      <input id="selectedGiftId" type="hidden" />
+
+      <label for="guestName">Seu nome ou nome do casal</label>
+      <input id="guestName" name="guestName" type="text" maxlength="80"
+             placeholder="Ex.: Ana e Diniz" required />
+
+      <p class="dialog__note">
+        Depois da confirmação, o item ficará marcado como reservado para os demais convidados.
+      </p>
+
+      <button class="button button--primary button--full" type="submit">
+        Confirmar reserva
+      </button>
+    </form>
+  </dialog>
+
+  <footer>
+    <p>Com carinho, os noivos.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
