@@ -1,5 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbw3NskjBBAW5psU_r4zViRDbi09rv6jJdZtsFLlUmVVgPSvu5-vM5oB6SbjbpiaXYsHOw/exec";
-const WHATSAPP_NUMBER = "5593981050369";
+const API_URL = "https://script.google.com/macros/s/AKfycbyd7tF2HxrcwKln7kDxfWH4gIm2kU0Jx2u6J2feol0yXJAMWpw7kb_q-yV7QMJU9Tcyfg/exec";
 
 const giftList = document.querySelector("#giftList");
 const statusMessage = document.querySelector("#statusMessage");
@@ -171,13 +170,7 @@ async function reserveGift(event) {
     reserveDialog.close();
     await loadGifts();
 
-    const message = encodeURIComponent(
-      `Olá! Reservei o presente "${data.gift}" em nome de ${guestName}.`
-    );
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
-
-    alert(`Pronto! "${data.gift}" foi reservado em nome de ${guestName}. Agora o WhatsApp será aberto para avisar os noivos.`);
-    window.open(whatsappUrl, "_blank", "noopener");
+    alert(`Pronto! "${data.gift}" foi reservado em nome de ${guestName}.`);
   } catch (error) {
     alert(error.message);
     await loadGifts();
