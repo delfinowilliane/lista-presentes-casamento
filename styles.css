@@ -1,5 +1,5 @@
 :root {
-  --background: #eff4e8;
+  --background: #f8f9fA;
   --surface: #ffffff;
   --text: #3d3d3d;
   --muted: #66705f;
@@ -29,7 +29,7 @@ body {
   text-align: center;
   background:
     radial-gradient(circle at top left, rgba(192, 210, 171, .72), transparent 46%),
-    linear-gradient(180deg, #eff4e8 0%, #f8faf5 100%);
+    linear-gradient(180deg, #f8f9fA 0%, #f8faf5 100%);
 }
 
 .hero__content { max-width: 760px; margin: 0 auto; }
@@ -354,7 +354,7 @@ footer {
 .swatch--sage-light { background: #c0d2ab; }
 .swatch--sage { background: #838f74; }
 .swatch--graphite { background: #3d3d3d; }
-.swatch--offwhite { background: #eff4e8; }
+.swatch--offwhite { background: #f8f9fA; }
 
 @media (max-width: 760px) {
   .palette-swatches {
